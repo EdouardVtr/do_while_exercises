@@ -5,6 +5,7 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
+        double somme = 0;
         int nbVal;
 
         do {
@@ -12,7 +13,6 @@ public class Main {
             nbVal = scan.nextInt();
         } while (nbVal <= 0);
 
-        double somme = 0;
         int count = 0;
 
         do {
@@ -20,10 +20,7 @@ public class Main {
             int val = scan.nextInt();
             somme += val;
             ++count;
-
         } while (count < nbVal);
-
-        double moyenne = somme / nbVal;
-        System.out.println("La moyenne de ces " + nbVal + " nombres est : " + moyenne);
+        System.out.println("La moyenne de ces " + nbVal + " nombres est : " + (double) somme / nbVal);
     }
 }
