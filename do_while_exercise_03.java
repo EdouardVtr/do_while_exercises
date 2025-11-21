@@ -5,40 +5,22 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-        double val= 0;
-        double somme = 1;
-        int count = -1;
+        int somme = 0, count = 1, val;
 
-        do {
-            System.out.println("Entrez votre valeur :");
-            val = scan.nextInt();
-            somme += val;
-            ++count;
-        } while (val != -1);
-        double moyenne = somme / count;
-        System.out.println("La somme de ces " + count + " nombres est : " + moyenne);
-    }
-}
+        System.out.print("Entrez une suite de nombre positifs (terminer par -1) : ");
+        val = scan.nextInt();
 
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-
-        Scanner scan = new Scanner(System.in);
-
-        int nb = 0, count = 0, somme = 0;
-
-        do {
-            somme += nb;
-            ++count;
-            System.out.print("Entrez le " + count + " nombre : ");
-            nb = scan.nextInt();
-            if (nb == -1) {
-                --count;
-            }
-        } while (nb != -1);
-        double moyenne = somme / count;
-        System.out.println("La moyenne des " + count + " est " + moyenne);
+        if (val == -1) {
+            System.out.println("Pas de nombre, pas de moyenne !");
+        }
+        else {
+            do {
+                ++count;
+                somme += val;
+                System.out.print("Entrer la valeur numéro " + count + " : ");
+                val = scan.nextInt();
+            } while (val != -1);
+            System.out.println("Moyenne : " + (double) somme / (count - 1));
+        }
     }
 }
