@@ -13,7 +13,6 @@ public class Main {
         System.out.println(a + " " + b);
     }
 }
-
 // a = 5, b = 2
 // 01) a =  3 / b = 2
 // 02) a =  1 / b = 2
