@@ -5,16 +5,21 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-        int nb;
-        int dernier = 0;
+        int val, last;
 
-        do {
-            System.out.println("Entrez votre valeur : ");
-            nb = scan.nextInt();
-            if (nb != -1) {
-                dernier = nb;
-            }
-        } while (nb != -1);
-        System.out.println("Le dernier est : " + dernier);
+        System.out.print("Entrez une suite de nombres positifs (terminer par -1) : ");
+        val = scan.nextInt();
+
+        if (val == -1) {
+            System.out.println("Pas de nombre, pas de dernier !");
+        }
+        else {
+            do {
+                last = val;
+                System.out.print("Entrez le nombre suivant : ");
+                val = scan.nextInt();
+            } while (val != -1);
+            System.out.println("Le dernier nombre est : " + last);
+        }
     }
 }
