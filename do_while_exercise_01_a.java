@@ -15,7 +15,6 @@ public class Main {
         System.out.println(a + " " + b);
     }
 }
-
 // a = 5, b = 2
 // 01) a = 10 / b = 12
 // 02) a = 20 / b = 32
