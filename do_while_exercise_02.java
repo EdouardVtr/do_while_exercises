@@ -5,11 +5,10 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Combien de valeur voulez-vous rentrer ? : ");
-        int nbVal = scan.nextInt();
+        int nbVal;
 
         do {
-            System.out.println("Ce nombre est invalide, recommencez : ");
+            System.out.print("Combien de valeur voulez-vous rentrer ? " + "(vous devez entrer une valeur positive) : ");
             nbVal = scan.nextInt();
         } while (nbVal <= 0);
 
@@ -17,11 +16,10 @@ public class Main {
         int count = 0;
 
         do {
-            System.out.println("Entrez une valeur : ");
+            System.out.print("Entrez une valeur : ");
             int val = scan.nextInt();
             somme += val;
             ++count;
-
 
         } while (count < nbVal);
 
